@@ -62,8 +62,8 @@ entry,
 
 Then add the following code to your custom css file,
 
-.mode_show.home #twentyfifteen__entry,
-.mode_show.home #twentyfifteen__entry-content {
+.mode_show #twentyfifteen__entry,
+.mode_show #twentyfifteen__entry-content {
     margin-left: 0 !important;
     margin-right: 0 !important;
     margin-bottom: 0 !important;
@@ -72,11 +72,11 @@ Then add the following code to your custom css file,
     box-shadow: none !important;
 }
 
-.mode_show.home #twentyfifteen__entry {
+.mode_show #twentyfifteen__entry {
     background-color: @ini_background_site;
 }
 
-.mode_show.home #twentyfifteen__entry-content {
+.mode_show #twentyfifteen__entry-content {
     margin-top: 0 !important;
 }
 
