@@ -1,6 +1,5 @@
-Twenty Fifteen Template for DokuWiki by lainme <lainme993@gmail.com>
-
-Based on Twenty Fifteen Theme for WordPress by WordPress.org & Automattic.com
+Twenty Fifteen Template for DokuWiki by lainme <lainme993@gmail.com>, based on
+the Twenty Fifteen Theme for WordPress by WordPress.org & Automattic.com
 
 == Information ==
 
@@ -12,12 +11,12 @@ RTL is supported by this template, but not fully checked.
 
 Only 'meta.html' will be included.
 
-2. Comments styling
+3. Comments styling
 
 Since I am using Disqus, styling for Discussion plugin or other comments plugin
 is not considered. In short, comments styling is not included.
 
-3. Closer look&feel with the original theme
+4. Closer look&feel with the original theme
 
 By default, entries don't have footer information (publish date, author,
 comments count, etc) and show within one single <article> block, due to the
