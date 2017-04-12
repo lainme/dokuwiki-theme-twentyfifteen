@@ -16,7 +16,7 @@ Only 'meta.html' will be included.
 Since I am using Disqus, styling for Discussion plugin or other comments plugin
 is not considered. In short, comments styling is not included.
 
-4. Closer look&feel with the original theme
+4. Closer look & feel with the original theme
 
 By default, entries don't have footer information (publish date, author,
 comments count, etc) and show within one single <article> block, due to the
