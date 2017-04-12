@@ -62,16 +62,22 @@ entry,
 
 Then add the following code to your custom css file,
 
-.home #twentyfifteen__entry,
-.home #twentyfifteen__entry-content {
-    margin: 0 !important;
+.mode_show.home #twentyfifteen__entry,
+.mode_show.home #twentyfifteen__entry-content {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
     padding: 0 !important;
     border: 0 !important;
     box-shadow: none !important;
 }
 
-.home #twentyfifteen__entry {
+.mode_show.home #twentyfifteen__entry {
     background-color: @ini_background_site;
+}
+
+.mode_show.home #twentyfifteen__entry-content {
+    margin-top: 0 !important;
 }
 
 If you are using other plugins, check if the plugin supports tpl or modify the
