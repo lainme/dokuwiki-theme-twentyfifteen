@@ -23,6 +23,8 @@ comments count, etc) and show within one single <article> block, due to the
 different mechanism of WordPress and Dokuwiki. However, the relavent styling is
 retained, so it's possible to get it back.
 
+If you are using miniblog, try the 'twentyfifteen' branch.
+
 If you are using BlogTNG, create 'list.php' tpl file that produces the
 following HTML for a single entry in blog lists,
 
@@ -60,10 +62,16 @@ entry,
 
 Then add the following code to your custom css file,
 
-#twentyfifteen__entry,
-#twentyfifteen__entry-content {
+.home #twentyfifteen__entry,
+.home #twentyfifteen__entry-content {
     margin: 0 !important;
     padding: 0 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+.home #twentyfifteen__entry {
+    background-color: @ini_background_site;
 }
 
 If you are using other plugins, check if the plugin supports tpl or modify the
