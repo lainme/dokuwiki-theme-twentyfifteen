@@ -115,7 +115,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
     <div class="site-content">
         <main class="site-main">
             <?php if($conf['breadcrumbs'] || $conf['youarehere']){ ?>
-            <article id="twentyfifteen__breadcrumb" class="entry">
+            <article class="entry entry-navigation">
                 <div class="entry-content">
                     <?php if($conf['breadcrumbs']){ ?>
                     <div><?php tpl_breadcrumbs() ?></div>
