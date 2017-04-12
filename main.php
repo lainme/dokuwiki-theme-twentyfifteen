@@ -115,7 +115,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
     <div class="site-content">
         <main class="site-main">
             <?php if($conf['breadcrumbs'] || $conf['youarehere']){ ?>
-            <article id="twentyfifteen_breadcrumb" class="entry">
+            <article id="twentyfifteen__breadcrumb" class="entry">
                 <div class="entry-content">
                     <?php if($conf['breadcrumbs']){ ?>
                     <div><?php tpl_breadcrumbs() ?></div>
@@ -126,8 +126,8 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                 </div>
             </article>
             <?php } ?>
-            <article id="twentyfifteen_entry" class="entry">
-                <div id="twentyfifteen_entry-content" class="entry-content">
+            <article id="twentyfifteen__entry" class="entry">
+                <div id="twentyfifteen__entry-content" class="entry-content">
                     <?php tpl_flush() ?>
                     <?php html_msgarea() ?>
                     <!-- wikipage start -->
