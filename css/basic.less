@@ -1,0 +1,472 @@
+/**
+ * DokuWiki Twenty Fifteen Template
+ *
+ * @link     https://github.com/lainme/dokuwiki-theme-twentyfifteen
+ * @author   WordPress.org & Automattic.com (upstream)
+ * @author   lainme <lainme993@gmail.com>
+ * @license  GPLv2 (http://www.gnu.org/licenses/gpl.html)
+ */
+
+/*Layout*/
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    background: @ini_background_site;
+    color: @ini_text;
+    font-family: "Noto Serif", serif;
+    font-size: 15px;
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+aside {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*Placeholder*/
+::-webkit-input-placeholder {
+    color: @ini_text_alt;
+    font-family: "Noto Sans", sans-serif;
+}
+
+:-moz-placeholder {
+    color: @ini_text_alt;
+    font-family: "Noto Sans", sans-serif;
+}
+
+::-moz-placeholder {
+    color: @ini_text_alt;
+    font-family: "Noto Sans", sans-serif;
+    opacity: 1; /* Since FF19 lowers the opacity of the placeholder by default */
+}
+
+:-ms-input-placeholder {
+    color: @ini_text_alt;
+    font-family: "Noto Sans", sans-serif;
+}
+
+/*Media*/
+img {
+    -ms-interpolation-mode: bicubic;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+figure {
+    margin: 0;
+}
+
+embed,
+iframe,
+object,
+video {
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+p > embed,
+p > iframe,
+p > object,
+p > video {
+    margin-bottom: 0;
+}
+
+/*Link*/
+a {
+    color: @ini_text;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: @ini_text_alt;
+}
+
+/*Paragraph*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    clear: left;
+    font-weight: 700;
+    margin: 0;
+}
+
+p {
+    margin-bottom: 1.6em;
+}
+
+/*Inline*/
+b,
+strong {
+    font-weight: 700;
+}
+
+i,
+em,
+cite {
+    font-style: italic;
+}
+
+del {
+    opacity: 0.8;
+}
+
+kbd,
+tt,
+var,
+samp {
+    font-family: Inconsolata, monospace;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted @ini_border;
+    cursor: help;
+}
+
+mark,
+ins {
+    background-color: @ini_highlight;
+    text-decoration: none;
+}
+
+small {
+    font-size: 75%;
+}
+
+big {
+    font-size: 125%;
+}
+
+/*Blocks*/
+blockquote {
+    border-left: 4px solid @ini_text_alt;
+    color: @ini_text_alt;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-style: italic;
+    line-height: 1.6667;
+    margin: 0 0 1.6667em 0;
+    padding-left: 0.7778em;
+}
+
+blockquote p {
+    margin-bottom: 1.6667em;
+}
+
+blockquote > p:last-child {
+    margin-bottom: 0;
+}
+
+blockquote cite,
+blockquote small {
+    color: @ini_text;
+    font-size: 15px;
+    font-size: 1.5rem;
+    font-family: "Noto Sans", sans-serif;
+    line-height: 1.6;
+}
+
+blockquote i,
+blockquote em,
+blockquote cite {
+    font-style: normal;
+}
+
+blockquote b,
+blockquote strong {
+    font-weight: 400;
+}
+
+address {
+    font-style: italic;
+    margin: 0 0 1.6em;
+}
+
+code,
+pre {
+    font-family: Inconsolata, monospace;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre {
+    background-color: transparent;
+    border: 1px solid @ini_border;
+    line-height: 1.2;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 0.8em;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+/*Lists*/
+hr {
+    background-color: @ini_border;
+    border: 0;
+    height: 1px;
+    margin-bottom: 1.6em;
+}
+
+ul,
+ol {
+    padding-left: 1.3333em;
+}
+
+dd {
+    margin: 0 0 1.6em 0em;
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+dt {
+    font-weight: bold;
+}
+
+li > ul,
+li > ol {
+    margin: 0 0 0 1.3333em;
+    padding: 0;
+}
+
+/*Table*/
+table {
+    border: 1px solid @ini_border;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-width: 1px 0 0 1px;
+    margin: 0 0 1.6em;
+    width: 100%;
+}
+
+caption {
+    font-weight: normal;
+    text-align: left;
+}
+
+th,
+td {
+    border-width: 0 1px 1px 0;
+    border-style: solid;
+    border-color: @ini_border;
+    text-align: left;
+    padding: 0.4em;
+}
+
+th {
+    font-weight: 700;
+}
+
+td {
+    font-weight: normal;
+}
+
+
+/*Form*/
+button,
+input,
+select,
+textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    max-width: 100%;
+}
+
+input,
+select,
+textarea {
+    background-color: @ini_background_alt;
+    border-radius: 0;
+    font-family: "Noto Serif", serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+
+button,
+input {
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    line-height: normal;
+}
+
+input,
+textarea {
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)); /* Removing the inner shadow on iOS inputs */
+    border: 1px solid @ini_border;
+    color: @ini_text_alt;
+}
+
+select,
+textarea {
+    line-height: 1.5;
+}
+
+select {
+    color: @ini_text;
+}
+
+button[disabled],
+input[disabled],
+select[disabled],
+textarea[disabled] {
+    cursor: default;
+    opacity: .5;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    background-color: @ini_text;
+    border: 0;
+    color: @ini_background;
+    cursor: pointer;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0.7917em 1.5em;
+    text-transform: uppercase;
+}
+
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+    padding: 0.375em;
+    width: 100%;
+}
+
+button:focus {
+    outline: 0;
+}
+
+select:focus {
+    outline: 2px solid @ini_border_alt;
+}
+
+input:focus,
+textarea:focus {
+    background-color: @ini_background;
+    border: 1px solid @ini_border_alt;
+    color: @ini_text;
+    outline: 0;
+}
+
+button:hover,
+button:focus,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+    background-color: @ini_text_alt;
+}
+
+/*RTL*/
+[dir=rtl] {
+    /*Layout*/
+    body {
+        direction: rtl;
+        unicode-bidi: embed;
+	font-family: Arial, Tahoma, sans-serif;
+    }
+
+    caption,
+    th,
+    td {
+        text-align: right;
+    }
+
+    /*Placeholder*/
+    ::-webkit-input-placeholder {
+        font-family: Arial, Tahoma, sans-serif;
+    }
+
+    :-moz-placeholder {
+        font-family: Arial, Tahoma, sans-serif;
+    }
+
+    ::-moz-placeholder {
+        font-family: Arial, Tahoma, sans-serif;
+    }
+
+    :-ms-input-placeholder {
+        font-family: Arial, Tahoma, sans-serif;
+    }
+
+    /*Blocks*/
+    blockquote {
+        border-right: 4px solid @ini_text_alt;
+        border-left: 0;
+        padding-right: 0.7778em;
+        padding-left: 0;
+    }
+
+    blockquote cite,
+    blockquote small {
+        font-family: Arial, Tahoma, sans-serif;
+    }
+
+    /*Lists*/
+    ul,
+    ol {
+        padding-right: 1.3333em;
+        padding-left: 0;
+    }
+
+    li > ul,
+    li > ol {
+        margin: 0 1.3333em 0 0;
+        padding: 0;
+    }
+
+    /*Table*/
+    caption,
+    th,
+    td {
+        text-align: right;
+    }
+
+    /*Form*/
+    button,
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"],
+    input,
+    select,
+    textarea {
+        font-family: Arial, Tahoma, sans-serif;
+    }
+}

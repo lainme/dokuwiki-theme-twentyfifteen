@@ -1,0 +1,96 @@
+Twenty Fifteen Template for DokuWiki by lainme <lainme993@gmail.com>
+
+Based on Twenty Fifteen Theme for WordPress by WordPress.org & Automattic.com
+
+== Information ==
+
+1. RTL
+
+RTL is supported by this template, but not fully checked.
+
+2. Include hooks
+
+Only 'meta.html' will be included.
+
+2. Comments styling
+
+Since I am using Disqus, styling for Discussion plugin or other comments plugin
+is not considered. In short, comments styling is not included.
+
+3. Closer look&feel with the original theme
+
+By default, entries don't have footer information (publish date, author,
+comments count, etc) and show within one single <article> block, due to the
+different mechanism of WordPress and Dokuwiki. However, the relavent styling is
+retained, so it's possible to get it back.
+
+If you are using BlogTNG, create 'list.php' tpl file that produces the
+following HTML for a single entry in blog lists,
+
+<article class="entry">
+    <header class="entry-header">
+        <h2 class="entry-title"><a href="[POST-URL]">[POST-TITLE]</h2>
+    </header>
+    <div class="entry-content">
+        [POST-CONTENT-WITHOUT-TITLE]
+    </div>
+    <footer class="entry-footer">
+        <span class="entry-date">[POST-DATE]</span>
+        <span class="entry-catagory">[POST-CATEGORY]</span>
+        <span class="entry-tag">[POST-TAG]</span>
+        <span class="entry-author">[POST-AUTHOR]</span>
+        <span class="entry-comment">[POST-COMMENTS-COUNT]</span>
+   </footer>
+</article>
+
+and create 'entry.php' tpl file that produces the following HTML for individual
+entry,
+
+<article class="entry">
+    <div class="entry-content">
+        [POST-CONTENT-WITH-TITLE]
+    </div>
+    <footer class="entry-footer">
+        <span class="entry-date">[POST-DATE]</span>
+        <span class="entry-catagory">[POST-CATEGORY]</span>
+        <span class="entry-tag">[POST-TAG]</span>
+        <span class="entry-author">[POST-AUTHOR]</span>
+        <span class="entry-comment">[POST-COMMENTS-COUNT]</span>
+   </footer>
+</article>
+
+Then add the following code to your custom css file,
+
+#twentyfifteen_entry,
+#twentyfifteen_entry-content {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+If you are using other plugins, check if the plugin supports tpl or modify the
+code by yourself.
+
+== Copyright ==
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with
+this program. If not, see <http://www.gnu.org/licenses/>.
+
+== Third-party ==
+
+Package: Normalize.css
+License: MIT
+Source: https://necolas.github.io/normalize.css
+
+Package: Genericons-Neue
+License: GPLv2
+Source: https://github.com/Automattic/genericons-neue

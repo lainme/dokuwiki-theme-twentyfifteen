@@ -1,0 +1,738 @@
+/**
+ * DokuWiki Twenty Fifteen Template
+ *
+ * @link     https://github.com/lainme/dokuwiki-theme-twentyfifteen
+ * @author   WordPress.org & Automattic.com (upstream)
+ * @author   lainme <lainme993@gmail.com>
+ * @license  GPLv2 (http://www.gnu.org/licenses/gpl.html)
+ */
+
+@-ms-viewport {
+    width: device-width;
+}
+
+@viewport {
+    width: device-width;
+}
+
+@media screen and (min-width: @ini_phone_width) and (max-width: @ini_tablet_width) {
+    body {
+        font-size: 19px;
+        font-size: 1.9rem;
+        line-height: 1.6842;
+    }
+
+    embed,
+    iframe,
+    object,
+    video,
+    p,
+    address,
+    pre,
+    hr,
+    ul,
+    ol,
+    dl,
+    dd,
+    table {
+        margin-bottom: 1.6842em;
+    }
+
+    blockquote {
+        font-size: 22px;
+        font-size: 2.2rem;
+        line-height: 1.8182;
+        margin-bottom: 1.8182em;
+        padding-left: 0.9091em;
+    }
+
+    blockquote p {
+        margin-bottom: 1.8182em;
+    }
+
+    blockquote cite,
+    blockquote small {
+        font-size: 19px;
+        font-size: 1.9rem;
+        line-height: 1.6842;
+    }
+
+    blockquote > ul,
+    blockquote > ol {
+        margin-left: 1.3333em;
+    }
+
+    blockquote > blockquote {
+        margin-left: 0;
+    }
+
+    pre {
+        line-height: 1.2632;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 19px;
+        font-size: 1.9rem;
+    }
+
+    select,
+    textarea {
+        line-height: 1.6842;
+    }
+
+    button,
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"] {
+        font-size: 16px;
+        font-size: 1.6rem;
+        padding: 0.8125em 1.625em;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    textarea {
+        padding: 0.5278em;
+    }
+
+    .site-branding {
+        min-height: 3.7895em;
+        padding-right: 74px;
+    }
+
+    .site-title {
+        font-size: 32px;
+        font-size: 3.2rem;
+        line-height: 1.25;
+    }
+
+    .site-description {
+        font-size: 16px;
+        font-size: 1.6rem;
+        display: block;
+    }
+
+    .secondary-toggle {
+        height: 64px;
+        width: 64px;
+    }
+
+    .secondary-toggle:before {
+        line-height: 62px;
+        width: 62px;
+    }
+
+    .secondary {
+        box-shadow: 0 0 1px @ini_border_neu;
+        margin: 7.6923% 7.6923% 0;
+        padding: 7.6923% 7.6923% 0;
+    }
+
+    .widget-area {
+        margin-top: 0;
+    }
+
+    .widget {
+        font-size: 16px;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        margin-bottom: 11.1111%;
+    }
+
+    .widget h2 {
+        margin: 0 0 1.5em;
+    }
+
+    .widget li {
+        padding: 0.7188em 0;
+    }
+
+    .widget p,
+    .widget address,
+    .widget hr,
+    .widget ul,
+    .widget ol,
+    .widget dl,
+    .widget dd,
+    .widget table,
+    .widget pre {
+        margin-bottom: 1.5em;
+    }
+
+    .widget blockquote {
+        font-size: 19px;
+        font-size: 1.9rem;
+        line-height: 1.6842;
+        margin-bottom: 1.6842em;
+        margin-left: -1.2632em;
+        padding-left: 1.0526em;
+    }
+
+    .widget blockquote p {
+        margin-bottom: 1.6842em;
+    }
+
+    .widget blockquote cite,
+    .widget blockquote small {
+        font-size: 16px;
+        font-size: 1.6rem;
+        line-height: 1.5;
+    }
+
+    .widget pre {
+        line-height: 1.5;
+        padding: 0.75em;
+    }
+
+    .widget select,
+    .widget textarea {
+        line-height: 1.5;
+    }
+
+    .widget input[type="text"],
+    .widget input[type="email"],
+    .widget input[type="url"],
+    .widget input[type="password"],
+    .widget input[type="search"],
+    .widget textarea {
+        padding: 0.75em;
+    }
+
+    .site-main {
+        padding: 7.6923% 0;
+    }
+
+    .entry {
+        box-shadow: 0 0 1px @ini_border_neu;
+        margin: 0 7.6923%;
+    }
+
+    .entry + .entry {
+        margin-top: 7.6923%;
+        border-top: 0;
+    }
+
+    .entry-header {
+        padding: 0 9.0909%;
+    }
+
+    .entry-title {
+        font-size: 39px;
+        font-size: 3.9rem;
+        line-height: 1.2308;
+        margin-bottom: 1.2308em;
+    }
+
+    .entry-content {
+        padding: 0 9.0909% 9.0909%;
+    }
+
+    .entry-content h1 {
+        font-size: 39px;
+        font-size: 3.9rem;
+        line-height: 1.2308;
+        margin-top: 1.641em;
+        margin-bottom: 0.8205em;
+    }
+
+    .entry-content h2 {
+        font-size: 32px;
+        font-size: 3.2rem;
+        line-height: 1.25;
+        margin-top: 2em;
+        margin-bottom: 1em;
+    }
+
+    .entry-content h3 {
+        font-size: 27px;
+        font-size: 2.7rem;
+        line-height: 1.1852;
+        margin-top: 2.3704em;
+        margin-bottom: 1.1852em;
+    }
+
+    .entry-content h4 {
+        font-size: 22px;
+        font-size: 2.2rem;
+        line-height: 1.4545;
+        margin-top: 2.9091em;
+        margin-bottom: 1.4545em;
+    }
+
+    .entry-content h5,
+    .entry-content h6 {
+        font-size: 19px;
+        font-size: 1.9rem;
+        line-height: 1.2632;
+        margin-top: 3.3684em;
+        margin-bottom: 1.6842em;
+    }
+
+    .entry-footer {
+        font-size: 16px;
+        font-size: 1.6rem;
+        padding: 4.5454% 9.0909%;
+    }
+
+    .entry-date:before,
+    .entry-category:before,
+    .entry-tag:before,
+    .entry-author:before,
+    .entry-comment:before {
+        top: 4px;
+    }
+
+    .site-footer {
+        border-top: 0;
+        box-shadow: 0 0 1px @ini_border_neu;
+        margin: 0 7.6923%;
+    }
+
+    .site-info {
+        font-size: 16px;
+        font-size: 1.6rem;
+    }
+
+    [dir=rtl] {
+	blockquote > ul,
+	blockquote > ol {
+            margin-right: 1.3333em;
+            margin-left: auto;
+	}
+
+	blockquote {
+            margin-left: auto;
+            padding-right: 0.9091em;
+            padding-left: 0;
+	}
+
+	blockquote > blockquote {
+            margin-right: 0;
+            margin-left: auto;
+	}
+
+	.site-branding {
+            padding-right: 0;
+            padding-left: 74px;
+	}
+
+	.widget blockquote {
+            margin-right: -1.2632em;
+            margin-left: auto;
+            padding-right: 1.0526em;
+            padding-left: 0;
+	}
+
+	.widget blockquote > blockquote {
+            margin-right: 0;
+            margin-left: auto;
+	}
+    }
+}
+
+@media screen and (min-width: @ini_tablet_width) {
+    body:before {
+        background-color: @ini_background;
+        box-shadow: 0 0 1px @ini_border_neu;
+        content: "";
+        display: block;
+        height: 100%;
+        min-height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 29.4118%;
+        z-index: 0; /* Fixes flashing bug with scrolling on Safari */
+    }
+
+    body {
+        font-size: 19px;
+        font-size: 1.9rem;
+        line-height: 1.6842;
+    }
+
+    embed,
+    iframe,
+    object,
+    video,
+    p,
+    address,
+    pre,
+    hr,
+    ul,
+    ol,
+    dl,
+    dd,
+    table {
+        margin-bottom: 1.6842em;
+    }
+
+    blockquote {
+        font-size: 22px;
+        font-size: 2.2rem;
+        line-height: 1.8182;
+        margin-bottom: 1.8182em;
+        padding-left: 0.9091em;
+    }
+
+    blockquote p {
+        margin-bottom: 1.8182em;
+    }
+
+    blockquote cite,
+    blockquote small {
+        font-size: 19px;
+        font-size: 1.9rem;
+        line-height: 1.6842;
+    }
+
+    blockquote > ul,
+    blockquote > ol {
+        margin-left: 1.3333em;
+    }
+
+    blockquote > blockquote {
+        margin-left: 0;
+    }
+
+    pre {
+        line-height: 1.2632;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 19px;
+        font-size: 1.9rem;
+    }
+
+    select,
+    textarea {
+        line-height: 1.6842;
+    }
+
+    button,
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"] {
+        font-size: 16px;
+        font-size: 1.6rem;
+        padding: 0.8125em 1.625em;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    textarea {
+        padding: 0.5278em;
+    }
+
+    .site {
+        margin: 0 auto;
+        max-width: @ini_site_width;
+    }
+
+    .sidebar {
+        float: left;
+        margin-right: -100%;
+        max-width: @ini_sidebar_width;
+        position: relative;
+        width: 29.4118%;
+    }
+
+    .site-header {
+        background-color: transparent;
+        border-bottom: 0;
+        margin: 20% 0;
+        padding: 0 20%;
+    }
+
+    .site-branding {
+        min-height: 0;
+        padding: 0;
+    }
+
+    .site-title {
+        font-size: 27px;
+        font-size: 2.7rem;
+        line-height: 1.1852;
+    }
+
+    .site-description {
+        font-size: 16px;
+        font-size: 1.6rem;
+        display: block;
+    }
+
+    .secondary-toggle {
+        display: none;
+        height: 64px;
+        width: 64px;
+    }
+
+    .secondary-toggle:before {
+        line-height: 62px;
+        width: 62px;
+    }
+
+    .secondary {
+        background-color: transparent;
+        box-shadow: none;
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    .widget-area {
+        margin-top: 0;
+    }
+
+    .widget {
+        font-size: 16px;
+        font-size: 1.6rem;
+        margin: 0 0 20%;
+        padding: 0 20%;
+        line-height: 1.5;
+    }
+
+    .widget h2 {
+        margin: 0 0 1.5em;
+    }
+
+    .widget p,
+    .widget address,
+    .widget hr,
+    .widget ul,
+    .widget ol,
+    .widget dl,
+    .widget dd,
+    .widget table,
+    .widget pre {
+        margin-bottom: 1.5em;
+    }
+
+    .widget li {
+        padding: 0.4688em 0;
+    }
+
+    .widget blockquote {
+        font-size: 16px;
+        font-size: 1.6rem;
+        padding-left: 1.25em;
+        line-height: 1.5;
+        margin-bottom: 1.5em;
+        margin-left: -1.5em;
+    }
+
+    .widget blockquote p {
+        margin-bottom: 1.5em;
+    }
+
+    .widget blockquote cite,
+    .widget blockquote small {
+        font-size: 13px;
+        font-size: 1.3rem;
+        line-height: 1.8462;
+    }
+
+    .widget pre {
+        padding: 0.5em;
+        line-height: 1.5;
+    }
+
+    .widget input,
+    .widget select,
+    .widget textarea {
+        font-size: 16px;
+        font-size: 1.6rem;
+    }
+
+    .widget button,
+    .widget input[type="button"],
+    .widget input[type="reset"],
+    .widget input[type="submit"] {
+        font-size: 13px;
+        font-size: 1.3rem;
+        padding: 0.8462em 1.6923em;
+    }
+
+    .widget input[type="text"],
+    .widget input[type="email"],
+    .widget input[type="url"],
+    .widget input[type="password"],
+    .widget input[type="search"],
+    .widget textarea {
+        padding: 0.5em;
+    }
+
+    .site-content {
+        display: block;
+        float: left;
+        margin-left: 29.4118%;
+        width: 70.5882%;
+    }
+
+    .site-main {
+        padding: 8.3333% 0;
+    }
+
+    .entry {
+        margin: 0 8.3333%;
+        padding-top: 8.3333%;
+        box-shadow: 0 0 1px @ini_border_neu;
+    }
+
+    .entry + .entry {
+        margin-top: 8.3333%;
+        border-top: 0;
+    }
+
+    .entry-header {
+        padding: 0 10%;
+    }
+
+    .entry-title {
+        font-size: 39px;
+        font-size: 3.9rem;
+        line-height: 1.2308;
+        margin-bottom: 1.2308em;
+    }
+
+    .entry-content {
+        padding: 0 10% 10%;
+    }
+
+    .entry-content h1 {
+        font-size: 39px;
+        font-size: 3.9rem;
+        line-height: 1.2308;
+        margin-top: 1.641em;
+        margin-bottom: 0.8205em;
+    }
+
+    .entry-content h2 {
+        font-size: 32px;
+        font-size: 3.2rem;
+        line-height: 1.25;
+        margin-top: 2em;
+        margin-bottom: 1em;
+    }
+
+    .entry-content h3 {
+        font-size: 27px;
+        font-size: 2.7rem;
+        line-height: 1.1852;
+        margin-top: 2.3704em;
+        margin-bottom: 1.1852em;
+    }
+
+    .entry-content h4 {
+        font-size: 22px;
+        font-size: 2.2rem;
+        line-height: 1.4545;
+        margin-top: 2.9091em;
+        margin-bottom: 1.4545em;
+    }
+
+    .entry-content h5,
+    .entry-content h6 {
+        font-size: 19px;
+        font-size: 1.9rem;
+        line-height: 1.2632;
+        margin-top: 3.3684em;
+        margin-bottom: 1.6842em;
+    }
+
+    .entry-footer {
+        font-size: 16px;
+        font-size: 1.6rem;
+        padding: 5% 10%;
+    }
+
+    .entry-date:before,
+    .entry-category:before,
+    .entry-tag:before,
+    .entry-author:before,
+    .entry-comment:before {
+        top: 4px;
+    }
+
+    .site-footer {
+        float: left;
+        margin: 0 0 0 35.2941%;
+        padding: 0;
+        width: 58.8235%;
+        border-top: 0;
+        box-shadow: 0 0 1px @ini_border_neu;
+    }
+
+    .site-info {
+        font-size: 16px;
+        font-size: 1.6rem;
+        padding: 5% 10%;
+    }
+
+    [dir=rtl] {
+	body:before {
+            right: 0;
+            left: auto;
+	}
+
+	blockquote > ul,
+	blockquote > ol {
+            margin-right: 1.3333em;
+            margin-left: auto;
+	}
+
+	blockquote {
+            margin-left: auto;
+            padding-right: 0.9091em;
+            padding-left: 0;
+	}
+
+	blockquote > blockquote {
+            margin-right: 0;
+            margin-left: auto;
+	}
+
+	.sidebar {
+            float: right;
+            margin-right: auto;
+            margin-left: -100%;
+	}
+
+	.site-branding {
+            padding: 0;
+	}
+
+	.widget blockquote {
+            margin-right: -1.5em;
+            margin-left: auto;
+            padding-right: 1.25em;
+            padding-left: 0;
+	}
+
+	.widget blockquote > blockquote {
+            margin-right: 0;
+            margin-left: auto;
+	}
+
+	.site-content {
+            float: right;
+            margin-right: 29.4118%;
+            margin-left: auto;
+	}
+
+	.site-footer {
+            float: right;
+            margin: 0 35.2941% 0 0;
+	}
+    }
+}

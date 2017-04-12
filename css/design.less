@@ -1,0 +1,434 @@
+/**
+ * DokuWiki Twenty Fifteen Template
+ *
+ * @link     https://github.com/lainme/dokuwiki-theme-twentyfifteen
+ * @author   WordPress.org & Automattic.com (upstream)
+ * @author   lainme <lainme993@gmail.com>
+ * @license  GPLv2 (http://www.gnu.org/licenses/gpl.html)
+ */
+
+/*Icon fonts*/
+.secondary-toggle:before,
+.entry-date:before,
+.entry-category:before,
+.entry-tag:before,
+.entry-author:before,
+.entry-comment:before {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-family:"Genericons-Neue";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    speak: none;
+    text-align: center;
+    text-decoration: inherit;
+    text-transform: none;
+    vertical-align: top;
+}
+
+/*Clearings*/
+.group:before,
+.group:after,
+.site:before,
+.site:after,
+.site-content:before,
+.site-content:after,
+.entry-content:before,
+.entry-content:after {
+    content: "";
+    display: table;
+}
+
+.group:after,
+.site:after,
+.site-content:after,
+.entry-content:after {
+    clear: both;
+}
+
+/*Accessibility*/
+.a11y {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+}
+
+/*Header*/
+.site-header {
+    background-color: @ini_background;
+    border-bottom: 1px solid @ini_border;
+    padding: 7.6923%;
+}
+
+.site-branding {
+    min-height: 2em;
+    padding-right: 60px;
+    position: relative;
+}
+
+.site-title {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 1.3636;
+    margin-bottom: 0;
+}
+
+.site-description {
+    display: none;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0.5em 0 0;
+    opacity: 0.7;
+}
+
+.secondary-toggle {
+    background-color: transparent;
+    border: 1px solid @ini_border;
+    height: 42px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 42px;
+}
+
+.secondary-toggle:before {
+    color: @ini_text;
+    content: "\F419";
+    line-height: 40px;
+    width: 40px;
+}
+
+.secondary-toggle:hover,
+.secondary-toggle:focus {
+    background-color: transparent;
+    border: 1px solid @ini_border_alt;
+}
+
+.secondary-toggle.toggled-on:before {
+    content: "\F406";
+    position: relative;
+    top: 1px;
+    left: -1px;
+}
+
+/*Widget*/
+.secondary {
+    background-color: @ini_background;
+    display: none;
+    padding: 0 7.6923%;
+}
+
+.secondary.toggled-on {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    display: block;
+}
+
+.widget-area {
+    margin: 9.09090% auto 0;
+}
+
+.widget {
+    color: @ini_text_alt;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    margin: 0 auto 9.09090%;
+    width: 100%;
+    word-break: break-all;
+}
+
+.widget > :last-child {
+    margin-bottom: 0;
+}
+
+.widget h2 {
+    color: @ini_text;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 100%;
+    margin: 0 0 1.6em;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.widget a{
+    border: 0;
+}
+
+.widget ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.widget li{
+    border-top: 1px solid @ini_border;
+    padding: 0.7667em 0;
+}
+
+.widget li:first-child{
+    border-top: 0;
+    padding-top: 0;
+}
+
+.widget li:last-child{
+    padding-bottom: 0;
+}
+
+.widget .search button[type="submit"] {
+    display: none;
+}
+
+/*Content*/
+.entry {
+    background-color: @ini_background;
+    padding-top: 7.6923%;
+    position: relative;
+}
+
+.entry + .entry {
+    border-top: 1px solid @ini_border;
+}
+
+.entry-header {
+    padding: 0 7.6923%;
+}
+
+.entry-title {
+    font-size: 26px;
+    font-size: 2.6rem;
+    line-height: 1.1538;
+    margin-bottom: 0.9231em;
+}
+
+.entry-content > :last-child {
+    margin-bottom: 0;
+}
+
+.entry-content {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    word-break: break-all;
+    padding: 0 7.6923% 7.6923%;
+}
+
+.entry-content a {
+    border-bottom: 1px solid @ini_text;
+}
+
+.entry-content a:hover,
+.entry-content a:focus {
+    border-bottom: 0;
+}
+
+.entry-content h1 {
+    font-size: 26px;
+    font-size: 2.6rem;
+    line-height: 1.1538;
+    margin-top: 1.8462em;
+    margin-bottom: 0.9231em;
+}
+
+.entry-content h2 {
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 1.3636;
+    margin-top: 2.1818em;
+    margin-bottom: 1.0909em;
+}
+
+.entry-content h3 {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 1.3333;
+    margin-top: 2.6667em;
+    margin-bottom: 1.3333em;
+}
+
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+    font-size: 15px;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-top: 3.2em;
+    margin-bottom: 1.6em;
+}
+
+.entry-content h5,
+.entry-content h6 {
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.entry-content > h1:first-child,
+.entry-content > h2:first-child,
+.entry-content > h3:first-child,
+.entry-content > h4:first-child,
+.entry-content > h5:first-child,
+.entry-content > h6:first-child {
+    margin-top: 0;
+}
+
+.entry-footer {
+    background-color: @ini_background_alt;
+    color: @ini_text_alt;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding: 3.8461% 7.6923%;
+}
+
+.entry-footer a {
+    border-bottom: 1px solid transparent;
+    color: @ini_text_alt;
+}
+
+.entry-footer a:hover {
+    border-bottom: 1px solid @ini_text;
+}
+
+.entry-footer a:hover,
+.entry-footer a:focus {
+    color: @ini_text;
+}
+
+.entry-date,
+.entry-category,
+.entry-tag,
+.entry-author,
+.entry-comment {
+    margin-right: 1em;
+}
+
+.entry-date:before,
+.entry-category:before,
+.entry-tag:before,
+.entry-author:before,
+.entry-comment:before {
+    margin-right: 2px;
+    position: relative;
+}
+
+.entry-date:before {
+    content: "\F307";
+
+}
+
+.entry-category:before {
+    content: "\F301";
+}
+
+.entry-tag:before {
+    content: "\F302";
+}
+
+.entry-author:before {
+    content: "\F304";
+}
+
+.entry-comment:before {
+    content: "\F300";
+}
+
+/*Footer*/
+.site-footer {
+    background-color: @ini_background;
+    border-top: 1px solid @ini_border;
+    padding: 3.84615% 7.6923%;
+}
+
+.site-info {
+    color: @ini_text_alt;
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.site-info a {
+    border-bottom: 1px solid transparent;
+    color: @ini_text_alt;
+}
+
+.site-info a:hover {
+    border-bottom: 1px solid @ini_text;
+}
+
+.site-info a:hover,
+.site-info a:focus {
+    color: @ini_text;
+}
+
+/*RTL*/
+[dir=rtl] {
+    /*Accessibility*/
+    .ally:hover,
+    .ally:focus {
+        right: 5px;
+        left: auto;
+    }
+
+    /*Header*/
+    .site-branding {
+        padding-right: 0;
+        padding-left: 60px;
+    }
+
+    .site-title,
+    .site-description {
+        font-family: Arial, Tahoma, sans-serif;
+    }
+
+    .secondary-toggle {
+        right: auto;
+        left: 0;
+    }
+
+    /*Widget*/
+    .widget ul{
+        padding: 0;
+    }
+
+    /*Content*/
+    .entry-footer {
+        font-family: Arial, Tahoma, sans-serif;
+    }
+
+    .entry-date:before,
+    .entry-category:before,
+    .entry-tag:before,
+    .entry-author:before,
+    .entry-comment:before {
+        margin-right: auto;
+        margin-left: 2px;
+    }
+
+    .entry-date,
+    .entry-category,
+    .entry-tag,
+    .entry-author,
+    .entry-comment {
+        margin-right: auto;
+        margin-left: 1em;
+    }
+}
