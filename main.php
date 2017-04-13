@@ -35,7 +35,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
         }
     </style>
 </head>
-<body class="<?php echo tpl_classes(); ?>">
+<body id="dokuwiki__top" class="<?php echo tpl_classes(); ?>">
 <div class="site">
     <div class="sidebar">
         <header class="site-header">
