@@ -47,7 +47,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                 <a class="site-logo" href="<?php echo wl(); ?>" title="<?php echo $conf['title']; ?>" rel="home" accesskey="h" title="[H]">
                     <img src="<?php echo $logo; ?>" alt=""/>
                 </a>
-                <? } ?>
+                <?php } ?>
                 <h1 class="site-title">
                     <a href="<?php echo wl(); ?>" rel="home" accesskey="h" title="[H]"><?php echo $conf['title']; ?></a>
                 </h1>
