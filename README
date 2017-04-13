@@ -11,16 +11,16 @@ the Twenty Fifteen Theme for WordPress by WordPress.org & Automattic.com
 
     Not tested, may not work properly for IE<9.
 
-2. Include hooks
+3. Include hooks
 
     Only 'meta.html' will be included.
 
-3. Comments styling
+4. Comments styling
 
     Since I am using Disqus, styling for Discussion plugin or other comments plugin
     is not considered. In short, comments styling is not included.
 
-4. Closer look & feel with the original theme
+5. Closer look & feel with the original theme
 
     By default, entries don't have footer information (publish date, author,
     comments count, etc) and show within one single <article> block, due to the
