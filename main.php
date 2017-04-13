@@ -24,16 +24,6 @@ header('X-UA-Compatible: IE=edge,chrome=1');
     <?php tpl_metaheaders() ?>
     <?php tpl_includeFile('meta.html') ?>
     <?php echo tpl_favicon(array('favicon', 'mobile')) ?>
-    <!--calc is broken when minimized by Dokuwiki-->
-    <style>
-        /*Desktop X-Large 1403px*/
-        @media screen and (min-width: 87.6875em) {
-            body:before {
-                width: -webkit-calc(50% - 289px);
-                width: calc(50% - 289px);
-            }
-        }
-    </style>
 </head>
 <body id="dokuwiki__top" class="<?php echo tpl_classes(); ?>">
 <div class="site">
