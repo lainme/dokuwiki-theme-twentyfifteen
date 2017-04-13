@@ -34,6 +34,24 @@ div.table {
     margin-bottom: 1em;
 }
 
+.widget div.li {
+    display: block;
+}
+
+.widget div.li {
+    border-top: 1px solid @ini_border;
+    padding: 0.7667em 0;
+}
+
+.widget div.li:first-child {
+    border-top: 0;
+    padding-top: 0;
+}
+
+.widget div.li:last-child {
+    padding-bottom: 0;
+}
+
 /*Content*/
 .entry-navigation {
     padding-top: 1em;
@@ -254,7 +272,17 @@ div#dokuwiki__detail {
 }
 
 /*Responsive*/
+@media screen and (min-width: @ini_phone_width) and (max-width: @ini_tablet_width) {
+    .widget div.li {
+        padding: 0.7188em 0;
+    }
+}
+
 @media screen and (min-width: @ini_tablet_width) {
+    .widget div.li {
+        padding: 0.4688em 0;
+    }
+
     #dw__toc {
         padding-bottom: 1em;
         width: 16em;
