@@ -72,6 +72,10 @@
     position: relative;
 }
 
+.site-logo img {
+    display: none;
+}
+
 .site-title {
     font-family: "Noto Sans", sans-serif;
     font-size: 22px;
@@ -163,32 +167,43 @@
     color: @ini_text;
     font-family: "Noto Sans", sans-serif;
     font-size: 100%;
-    margin: 0 0 1.6em;
+    margin: 9.09090% 0 1.6em;
     letter-spacing: 0.04em;
     text-transform: uppercase;
 }
 
-.widget a{
+.widget h2:first-of-type {
+    margin-top: 0;
+}
+
+.widget a {
     border: 0;
 }
 
-.widget ul{
+.widget ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.widget li{
+.widget div.li {
+    display: block;
+}
+
+.widget li,
+.widget div.li {
     border-top: 1px solid @ini_border;
     padding: 0.7667em 0;
 }
 
-.widget li:first-child{
+.widget li:first-child,
+.widget div.li:first-child {
     border-top: 0;
     padding-top: 0;
 }
 
-.widget li:last-child{
+.widget li:last-child,
+.widget div.li:last-child {
     padding-bottom: 0;
 }
 
@@ -211,11 +226,8 @@
     padding: 0 7.6923%;
 }
 
-.entry-title {
-    font-size: 26px;
-    font-size: 2.6rem;
-    line-height: 1.1538;
-    margin-bottom: 0.9231em;
+.entry-content > :first-child {
+    margin-top: 0;
 }
 
 .entry-content > :last-child {
@@ -405,7 +417,7 @@
     }
 
     /*Widget*/
-    .widget ul{
+    .widget ul {
         padding: 0;
     }
 

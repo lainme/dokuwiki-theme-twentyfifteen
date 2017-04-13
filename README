@@ -30,7 +30,7 @@ following HTML for a single entry in blog lists,
 
 <article class="entry">
     <header class="entry-header">
-        <h2 class="entry-title"><a href="[POST-URL]">[POST-TITLE]</h2>
+        <h1 class="entry-title"><a href="[POST-URL]">[POST-TITLE]</h1>
     </header>
     <div class="entry-content">
         [POST-CONTENT-WITHOUT-TITLE]

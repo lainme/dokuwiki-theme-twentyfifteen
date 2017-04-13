@@ -144,14 +144,7 @@
         margin-bottom: 11.1111%;
     }
 
-    .widget h2 {
-        margin: 0 0 1.5em;
-    }
-
-    .widget li {
-        padding: 0.7188em 0;
-    }
-
+    .widget h2,
     .widget p,
     .widget address,
     .widget hr,
@@ -162,6 +155,16 @@
     .widget table,
     .widget pre {
         margin-bottom: 1.5em;
+    }
+
+    .widget li > ul,
+    .widget li > ol {
+        margin-bottom: 0;
+    }
+
+    .widget li,
+    .widget div.li {
+        padding: 0.7188em 0;
     }
 
     .widget blockquote {
@@ -219,13 +222,6 @@
 
     .entry-header {
         padding: 0 9.0909%;
-    }
-
-    .entry-title {
-        font-size: 39px;
-        font-size: 3.9rem;
-        line-height: 1.2308;
-        margin-bottom: 1.2308em;
     }
 
     .entry-content {
@@ -459,6 +455,12 @@
         padding: 0;
     }
 
+    .site-logo img {
+        max-width: 50%;
+        display: block;
+        margin: 1em auto;
+    }
+
     .site-title {
         font-size: 27px;
         font-size: 2.7rem;
@@ -503,7 +505,7 @@
     }
 
     .widget h2 {
-        margin: 0 0 1.5em;
+        margin: 20% 0 1.5em;
     }
 
     .widget p,
@@ -518,7 +520,13 @@
         margin-bottom: 1.5em;
     }
 
-    .widget li {
+    .widget li > ul,
+    .widget li > ol {
+        margin-bottom: 0;
+    }
+
+    .widget li,
+    .widget div.li {
         padding: 0.4688em 0;
     }
 
@@ -596,13 +604,6 @@
 
     .entry-header {
         padding: 0 10%;
-    }
-
-    .entry-title {
-        font-size: 39px;
-        font-size: 3.9rem;
-        line-height: 1.2308;
-        margin-bottom: 1.2308em;
     }
 
     .entry-content {
