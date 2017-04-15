@@ -33,7 +33,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                 <?php
                     $logo = tpl_getMediaFile(array(':wiki:logo.png', ':logo.png', 'images/logo.png'), false);
                 ?>
-                <?php if (file_exists($logo)) { ?>
+                <?php if (file_exists(tpl_basedir().$logo)) { ?>
                 <a class="site-logo" href="<?php echo wl(); ?>" title="<?php echo $conf['title']; ?>" rel="home" accesskey="h" title="[H]">
                     <img src="<?php echo $logo; ?>" alt=""/>
                 </a>
