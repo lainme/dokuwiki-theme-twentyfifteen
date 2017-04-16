@@ -27,7 +27,7 @@ the Twenty Fifteen Theme for WordPress by WordPress.org & Automattic.com
     different mechanism of WordPress and Dokuwiki. However, the relavent styling is
     retained, so it's possible to get it back.
 
-    If you are using miniblog, try the 'twentyfifteen' branch.
+    If you are using miniblog, use syntax '<miniblog twentyfifteen>' instead.
 
     If you are using BlogTNG, create 'list.php' tpl file that produces the
     following HTML for a single entry in blog lists,
