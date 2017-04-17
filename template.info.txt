@@ -1,7 +1,7 @@
 base     twentyfifteen
 author   lainme
 email    lainme993@gmail.com
-date     2017-04-16
+date     2017-04-17
 name     Twenty Fifteen Template
 desc     Based on the Twenty Fifteen theme for WordPress
-url      https://github.com/lainme/dokuwiki-theme-twentyfifteen
+url      https://www.dokuwiki.org/template:twentyfifteen
