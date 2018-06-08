@@ -31,11 +31,16 @@ header('X-UA-Compatible: IE=edge,chrome=1');
         <header class="site-header">
             <div class="site-branding">
                 <?php
-                    $logo = tpl_getMediaFile(array(':wiki:logo.png', ':logo.png', 'images/logo.png'), false);
+                    // get logo either out of the template images folder or data/media folder
+                    $logoSize = array();
+                    $logo = tpl_getMediaFile(array(':wiki:logo.png', ':logo.png', 'images/logo.png'), false, $logoSize);
+                    // display logo and wiki title in a link to the home page
+                    tpl_link(
+                        wl(),
+                        '<img src="'.$logo.'" '.$logoSize[3].' alt="" />',
+                        'class="site-logo" accesskey="h" title="[H]"'
+                    );
                 ?>
-                <a class="site-logo" href="<?php echo wl(); ?>" title="<?php echo $conf['title']; ?>" rel="home" accesskey="h" title="[H]">
-                    <img src="<?php echo $logo; ?>" alt=""/>
-                </a>
                 <h1 class="site-title">
                     <a href="<?php echo wl(); ?>" rel="home" accesskey="h" title="[H]"><?php echo $conf['title']; ?></a>
                 </h1>
