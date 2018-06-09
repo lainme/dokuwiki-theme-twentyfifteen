@@ -31,15 +31,9 @@ header('X-UA-Compatible: IE=edge,chrome=1');
         <header class="site-header">
             <div class="site-branding">
                 <?php
-                    // get logo either out of the template images folder or data/media folder
                     $logoSize = array();
                     $logo = tpl_getMediaFile(array(':wiki:logo.png', ':logo.png', 'images/logo.png'), false, $logoSize);
-                    // display logo and wiki title in a link to the home page
-                    tpl_link(
-                        wl(),
-                        '<img src="'.$logo.'" '.$logoSize[3].' alt="" />',
-                        'class="site-logo" accesskey="h" title="[H]"'
-                    );
+                    tpl_link(wl(), '<img src="'.$logo.'" '.$logoSize[3].' alt="" />', 'class="site-logo" accesskey="h" title="[H]"');
                 ?>
                 <h1 class="site-title">
                     <a href="<?php echo wl(); ?>" rel="home" accesskey="h" title="[H]"><?php echo $conf['title']; ?></a>
@@ -60,38 +54,16 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                 <?php endif ?>
                 <aside class="widget">
                     <h2><?php echo $lang['site_tools'] ?></h3>
-                    <ul>
-                        <?php tpl_toolsevent('sitetools', array(
-                            'recent' => tpl_action('recent', 1, 'li', 1),
-                            'media'  => tpl_action('media', 1, 'li', 1),
-                            'index'  => tpl_action('index', 1, 'li', 1),
-                        )); ?>
-                    </ul>
+                    <ul><?php echo (new \dokuwiki\Menu\SiteMenu())->getListItems('', false); ?></ul>
                 </aside>
                 <aside class="widget">
                     <h2><?php echo $lang['page_tools'] ?></h3>
-                    <ul>
-                        <?php tpl_toolsevent('pagetools', array(
-                            'edit'      => tpl_action('edit', 1, 'li', 1),
-                            'revisions' => tpl_action('revisions', 1, 'li', 1),
-                            'backlink'  => tpl_action('backlink', 1, 'li', 1),
-                            'subscribe' => tpl_action('subscribe', 1, 'li', 1),
-                            'revert'    => tpl_action('revert', 1, 'li', 1),
-                            'top'       => tpl_action('top', 1, 'li', 1),
-                        )); ?>
-                    </ul>
+                    <ul><?php echo (new \dokuwiki\Menu\PageMenu())->getListItems('', false); ?></ul>
                 </aside>
                 <?php if ($conf['useacl']): ?>
                 <aside class="widget">
                     <h2><?php echo $lang['user_tools'] ?></h3>
-                    <ul>
-                        <?php tpl_toolsevent('usertools', array(
-                            'admin'    => tpl_action('admin', 1, 'li', 1),
-                            'profile'  => tpl_action('profile', 1, 'li', 1),
-                            'register' => tpl_action('register', 1, 'li', 1),
-                            'login'    => tpl_action('login', 1, 'li', 1),
-                        )); ?>
-                    </ul>
+                    <ul><?php echo (new \dokuwiki\Menu\UserMenu())->getListItems('', false); ?></ul>
                     <?php if (!empty($_SERVER['REMOTE_USER'])) {
                         echo '<p>';
                         tpl_userinfo();
